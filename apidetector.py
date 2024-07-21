@@ -138,7 +138,7 @@ def test_subdomain_endpoints(subdomain, common_endpoints, mixed_mode, verbose, u
     for protocol in protocols:
         for endpoint in common_endpoints:
             url = f"{protocol}{subdomain}{endpoint}"
-            result = test_endpoint(url, error_content, verbose, user_agent)
+            result = test_endpoint(url, error_content, verbose, user_agent, regex_patterns)
             if result:
                 valid_urls.append(result)
                 if verbose:
